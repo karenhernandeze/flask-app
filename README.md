@@ -14,8 +14,13 @@
 ### 3. 
 
     docker run -d -p 5000:5000 python-docker
+    
+### 4. 
 
-### 4. To stop the currently running container, we execute this command:
+    Visit link http://localhost:5000/
 
+### 5. To stop the currently running container, we execute this command:
+
+    docker ps (To get docker containers info) 
     docker stop <container-name>
 
