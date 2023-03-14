@@ -1,23 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>Home</title>
+	<title>Welcome!</title>
 </head>
 <style>
-	.str{
-		color: Red;
-		font-weight: bold;
+	body,
+	html {
+		height: 100%;
+		margin: 0;
 	}
-	.btn{
-		font-size: large;
-		color: blue;
+
+	.bgimg {
+		background-image: url('../static/trees.png');
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		color: white;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 25px;
+	}
+
+	.topleft {
+		position: absolute;
+		top: 0;
+		left: 16px;
+	}
+
+	.bottomleft {
+		position: absolute;
+		bottom: 0;
+		left: 16px;
+	}
+
+	.middle {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	hr {
+		margin: auto;
+		width: 40%;
 	}
 </style>
-<body >
-<br>
-<h1>Welcome <strong class="str" >{{name}}</strong></h1>
-<a class="btn" href="{{url_for('login_html')}}">Logout</a>
 
+<body>
+	<div class="bgimg">
+		<div class="middle">
+			<h1>WELCOME</h1>
+			<hr>
+			<p>{{name}}</p>
+		</div>
+		<div class="bottomleft">
+			<a class="btn" href="{{url_for('login_html')}}">Logout</a>
+		</div>
+	</div>
 </body>
 </html>
