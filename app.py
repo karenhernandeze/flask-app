@@ -12,8 +12,7 @@ def login():
     checkpsswd = password.isalpha() or password.isnumeric()
     
     if username[0].isupper() and not(checkpsswd): 
-        return render_template('login.html', info='Correct')
-        # return render_template('home.html', name=username)
+        return render_template('home.html', name=username)
     else:
         return render_template('login.html', info='Invalid Credentials, Please Check Again')
 
